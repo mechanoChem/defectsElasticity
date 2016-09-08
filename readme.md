@@ -5,6 +5,7 @@ from the Computational Physics Group at the University of Michigan, adviser: Pro
 current lead developer: Zhenlin Wang
 
 List of contributors:
+
 Zhenlin Wang
 
 Shiva Rudraraju
@@ -40,10 +41,16 @@ This code has been developed under the support of the following:
 Usage
 =======================================================================
 1) download and install openIGA [https://github.com/mechanoChem/openIGA]
+
 2) download defectElasticity code
+
 3) modify code as necessary; initBoundValueProblems contains templates for defects problem and structure problem
+
 4) modify CmakeLists.txt 
+
 5) $cmake CmakeLists.txt
+
 6) $make run
+
 
 data:08/22/2016
