@@ -26,7 +26,7 @@ This is version 0.1, the intial release of the code.
 
 License
 =======================================================================
-GNU GENERAL PUBLIC LICENSE. Please see the file LICENSE for details.
+GNU LESSER GENERAL PUBLIC LICENSE. Please see the file LICENSE for details.
 
 
 Acknowledgements
