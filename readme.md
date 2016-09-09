@@ -17,7 +17,7 @@ defectsElasticity code is an isogeometric analysis based code, for solving the p
 
 1.structure problem [S. Rudraraju, A. Van der Ven, K. Garikipati, “Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains“, Computer Methods in Applied Mechanics and Engineering, 2014]
 
-2.defects represents by force dipole [Z, Wang, S. Rudraraju, K. Garikipati, “A three dimensional field formulation, and isogeometric solutions to point and line defects using Toupin's theory of gradient elasticity at finite strains”, Journal of the Mechanics and Physics of Solids, 2016]
+2.defects (point defects, edge dislocations, screw dislocations and dislocation loop) represent by force dipole [Z, Wang, S. Rudraraju, K. Garikipati, “A three dimensional field formulation, and isogeometric solutions to point and line defects using Toupin's theory of gradient elasticity at finite strains”, Journal of the Mechanics and Physics of Solids, 2016]
 
 The code is based on openIGA lib [https://github.com/mechanoChem/openIGA]
 
