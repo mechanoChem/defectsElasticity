@@ -1,4 +1,4 @@
-/*
+/**
 *base class for dislocation representing by force dipole 
 *derived from IGA
 */
@@ -15,26 +15,30 @@ template <int dim>
 class IGA_dislocation: public IGA<dim>
 {
 public:
-	/*
-	*IGA_dislocation constructor and destructor
+	/**
+	*IGA_dislocation constructor
 	*/
   IGA_dislocation (NURBSMesh<dim>& _mesh, parametersClass& _params);
+	
+	/**
+	*IGA_dislocation destructor
+	*/
   ~IGA_dislocation();
 	
-	/*
+	/**
 	*entrance of run IGA_dislocation
 	*User may use it directly
 	*/
   void run();
 	
-	/*
+	/**
 	*apply dirchlet boundary condition
 	*User may change it accordingly and add neumman boundary condition if needed
 	*for applying neumman boundary condition please see example of structure problem  
 	*/
   void apply_boundary_conditions();
 	
-	/*
+	/**
 	*Essential to dislocation represented by force dipole
 	*please see mark_plane.cc for specific implementation
 	*Mark special plane and defects flags
@@ -51,20 +55,20 @@ public:
 	*/
   void mark_plane();
 	
-	/*
+	/**
 	*this function generates vtk file
 	*User may use it directly
 	*/
   void output (unsigned int _cycle);
 	
-	/*
+	/**
 	*this function assembles jacobian and righ hand side 
 	*use "dislocationModel" defined in "run"
 	*User may use it directly
 	*/
   void assemble_system_interval (const typename std::vector<knotSpan<dim> >::iterator &begin, const typename std::vector<knotSpan<dim> >::iterator &end);
   
-	/*
+	/**
 	*include model type
 	*/
 	model_dislocation<Sacado::Fad::DFad<double>,dim>* dislocationModel; 
