@@ -1,15 +1,14 @@
-defectsElasticity code: structure and defects modeling based on openIGA 
+defectsElasticity: Gradient elasticity based code for modeling defects and structural problems. Based on openIGA library. 
 
-from the Computational Physics Group at the University of Michigan, adviser: Prof. Krishna Garikipati
-
-current lead developer: Zhenlin Wang
+Developed by the Computational Physics Group at the University of Michigan.
+http://www.umich.edu/~compphys/index.html
 
 List of contributors:
-
-Zhenlin Wang
-
+Zhenlin Wang (Lead Developer)
 Shiva Rudraraju
+Krishna Garikipati
 
+<B>Code documentation:</B> https://goo.gl/Qyx4Rv <br>
 
 Overview
 =======================================================================
@@ -25,7 +24,6 @@ The code is based on openIGA lib [https://github.com/mechanoChem/openIGA]
 Version information
 =======================================================================
 This is version 0.1, the intial release of the code.
-
 
 License
 =======================================================================
@@ -64,5 +62,3 @@ If you write a paer using results obtained with the help of this code,  please c
 
 2) S. Rudraraju, A. Van der Ven, K. Garikipati, “Three dimensional iso-geometric solutions to general boundary value problems of Toupin's theory of gradient elasticity at finite strains”, Computer Methods in Applied Mechanics and Engineering Vol 278: 705-728, 2014 [http://arxiv.org/abs/1404.0094]
 
-
-data:08/22/2016
