@@ -4,8 +4,8 @@ Developed by the Computational Physics Group at the University of Michigan.
 http://www.umich.edu/~compphys/index.html
 
 List of contributors:
-Zhenlin Wang (Lead Developer)
-Shiva Rudraraju
+Zhenlin Wang (Lead Developer);
+Shiva Rudraraju;
 Krishna Garikipati
 
 <B>Code documentation:</B> https://goo.gl/Qyx4Rv <br>
