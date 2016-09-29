@@ -1,0 +1,976 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>IGA_dislocation.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/include/base/</path>
+    <filename>_i_g_a__dislocation_8h</filename>
+    <includes id="model__dislocation_8h" name="model_dislocation.h" local="yes" imported="no">model/model_dislocation.h</includes>
+    <class kind="class">IGA_dislocation</class>
+  </compound>
+  <compound kind="file">
+    <name>IGA_structure.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/include/base/</path>
+    <filename>_i_g_a__structure_8h</filename>
+    <includes id="model__structure_8h" name="model_structure.h" local="yes" imported="no">model/model_structure.h</includes>
+    <class kind="class">IGA_structure</class>
+  </compound>
+  <compound kind="file">
+    <name>model_dislocation.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/include/model/</path>
+    <filename>model__dislocation_8h</filename>
+    <class kind="class">model_dislocation</class>
+  </compound>
+  <compound kind="file">
+    <name>model_structure.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/include/model/</path>
+    <filename>model__structure_8h</filename>
+    <class kind="class">model_structure</class>
+  </compound>
+  <compound kind="file">
+    <name>bFitting.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/</path>
+    <filename>b_fitting_8h</filename>
+    <member kind="function">
+      <type>double</type>
+      <name>displacementFitting</name>
+      <anchorfile>b_fitting_8h.html</anchorfile>
+      <anchor>adf916f685282fbc82e9f6ff015ad2423</anchor>
+      <arglist>(NURBSMesh&lt; dim &gt; *mesh, denseVector U, parametersClass *params)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Fill_analytical_displcment</name>
+      <anchorfile>b_fitting_8h.html</anchorfile>
+      <anchor>afcb2912ca5267bd930fd7b59400a3140</anchor>
+      <arglist>(solutionClass&lt; dim &gt; &amp;displacement_anl, NURBSMesh&lt; dim &gt; *mesh, parametersClass *params)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_L2_norm</name>
+      <anchorfile>b_fitting_8h.html</anchorfile>
+      <anchor>a55816bf4251c0d32c68bada393622858</anchor>
+      <arglist>(NURBSMesh&lt; dim &gt; *mesh, denseVector U, parametersClass *params)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>apply_boundary_conditions.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/edge_dislocation/multiple/</path>
+    <filename>defects_2edge__dislocation_2multiple_2apply__boundary__conditions_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>apply_boundary_conditions.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/edge_dislocation/single/</path>
+    <filename>defects_2edge__dislocation_2single_2apply__boundary__conditions_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>apply_boundary_conditions.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/loop/</path>
+    <filename>defects_2loop_2apply__boundary__conditions_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>apply_boundary_conditions.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/multiple/</path>
+    <filename>defects_2screw_2multiple_2apply__boundary__conditions_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>apply_boundary_conditions.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/single/</path>
+    <filename>defects_2screw_2single_2apply__boundary__conditions_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>apply_boundary_conditions.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/bending/</path>
+    <filename>structure_2bending_2apply__boundary__conditions_8cc</filename>
+    <includes id="model__structure_8h" name="model_structure.h" local="yes" imported="no">model/model_structure.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>apply_boundary_conditions.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/pointDefect/</path>
+    <filename>structure_2point_defect_2apply__boundary__conditions_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>apply_boundary_conditions.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/tension/</path>
+    <filename>structure_2tension_2apply__boundary__conditions_8cc</filename>
+    <includes id="model__structure_8h" name="model_structure.h" local="yes" imported="no">model/model_structure.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>apply_boundary_conditions.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/torsion/</path>
+    <filename>structure_2torsion_2apply__boundary__conditions_8cc</filename>
+    <includes id="model__structure_8h" name="model_structure.h" local="yes" imported="no">model/model_structure.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>main.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/edge_dislocation/multiple/</path>
+    <filename>defects_2edge__dislocation_2multiple_2main_8cc</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DIMS</name>
+      <anchorfile>defects_2edge__dislocation_2multiple_2main_8cc.html</anchorfile>
+      <anchor>a4ddd3ba5bd21eaaed12b0f39f346d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_QUAD_POINTS</name>
+      <anchorfile>defects_2edge__dislocation_2multiple_2main_8cc.html</anchorfile>
+      <anchor>a59c7625aa22cd8772a1952970f08cecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_THREADS</name>
+      <anchorfile>defects_2edge__dislocation_2multiple_2main_8cc.html</anchorfile>
+      <anchor>a7735206bdfad487588bba2126b806ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>defects_2edge__dislocation_2multiple_2main_8cc.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>main.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/edge_dislocation/single/</path>
+    <filename>defects_2edge__dislocation_2single_2main_8cc</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DIMS</name>
+      <anchorfile>defects_2edge__dislocation_2single_2main_8cc.html</anchorfile>
+      <anchor>a4ddd3ba5bd21eaaed12b0f39f346d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_QUAD_POINTS</name>
+      <anchorfile>defects_2edge__dislocation_2single_2main_8cc.html</anchorfile>
+      <anchor>a59c7625aa22cd8772a1952970f08cecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_THREADS</name>
+      <anchorfile>defects_2edge__dislocation_2single_2main_8cc.html</anchorfile>
+      <anchor>a7735206bdfad487588bba2126b806ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>defects_2edge__dislocation_2single_2main_8cc.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>main.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/loop/</path>
+    <filename>defects_2loop_2main_8cc</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DIMS</name>
+      <anchorfile>defects_2loop_2main_8cc.html</anchorfile>
+      <anchor>a4ddd3ba5bd21eaaed12b0f39f346d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_QUAD_POINTS</name>
+      <anchorfile>defects_2loop_2main_8cc.html</anchorfile>
+      <anchor>a59c7625aa22cd8772a1952970f08cecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_THREADS</name>
+      <anchorfile>defects_2loop_2main_8cc.html</anchorfile>
+      <anchor>a7735206bdfad487588bba2126b806ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>defects_2loop_2main_8cc.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>main.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/multiple/</path>
+    <filename>defects_2screw_2multiple_2main_8cc</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DIMS</name>
+      <anchorfile>defects_2screw_2multiple_2main_8cc.html</anchorfile>
+      <anchor>a4ddd3ba5bd21eaaed12b0f39f346d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_QUAD_POINTS</name>
+      <anchorfile>defects_2screw_2multiple_2main_8cc.html</anchorfile>
+      <anchor>a59c7625aa22cd8772a1952970f08cecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_THREADS</name>
+      <anchorfile>defects_2screw_2multiple_2main_8cc.html</anchorfile>
+      <anchor>a7735206bdfad487588bba2126b806ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>defects_2screw_2multiple_2main_8cc.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>main.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/single/</path>
+    <filename>defects_2screw_2single_2main_8cc</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DIMS</name>
+      <anchorfile>defects_2screw_2single_2main_8cc.html</anchorfile>
+      <anchor>a4ddd3ba5bd21eaaed12b0f39f346d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_QUAD_POINTS</name>
+      <anchorfile>defects_2screw_2single_2main_8cc.html</anchorfile>
+      <anchor>a59c7625aa22cd8772a1952970f08cecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_THREADS</name>
+      <anchorfile>defects_2screw_2single_2main_8cc.html</anchorfile>
+      <anchor>a7735206bdfad487588bba2126b806ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>defects_2screw_2single_2main_8cc.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>main.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/example/</path>
+    <filename>example_2main_8cc</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DIMS</name>
+      <anchorfile>example_2main_8cc.html</anchorfile>
+      <anchor>a4ddd3ba5bd21eaaed12b0f39f346d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_QUAD_POINTS</name>
+      <anchorfile>example_2main_8cc.html</anchorfile>
+      <anchor>a59c7625aa22cd8772a1952970f08cecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_THREADS</name>
+      <anchorfile>example_2main_8cc.html</anchorfile>
+      <anchor>a7735206bdfad487588bba2126b806ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>example_2main_8cc.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>main.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/bending/</path>
+    <filename>structure_2bending_2main_8cc</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DIMS</name>
+      <anchorfile>structure_2bending_2main_8cc.html</anchorfile>
+      <anchor>a4ddd3ba5bd21eaaed12b0f39f346d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_QUAD_POINTS</name>
+      <anchorfile>structure_2bending_2main_8cc.html</anchorfile>
+      <anchor>a59c7625aa22cd8772a1952970f08cecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_THREADS</name>
+      <anchorfile>structure_2bending_2main_8cc.html</anchorfile>
+      <anchor>a7735206bdfad487588bba2126b806ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>structure_2bending_2main_8cc.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>main.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/pointDefect/</path>
+    <filename>structure_2point_defect_2main_8cc</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DIMS</name>
+      <anchorfile>structure_2point_defect_2main_8cc.html</anchorfile>
+      <anchor>a4ddd3ba5bd21eaaed12b0f39f346d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_QUAD_POINTS</name>
+      <anchorfile>structure_2point_defect_2main_8cc.html</anchorfile>
+      <anchor>a59c7625aa22cd8772a1952970f08cecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_THREADS</name>
+      <anchorfile>structure_2point_defect_2main_8cc.html</anchorfile>
+      <anchor>a7735206bdfad487588bba2126b806ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>structure_2point_defect_2main_8cc.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>main.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/tension/</path>
+    <filename>structure_2tension_2main_8cc</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DIMS</name>
+      <anchorfile>structure_2tension_2main_8cc.html</anchorfile>
+      <anchor>a4ddd3ba5bd21eaaed12b0f39f346d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_QUAD_POINTS</name>
+      <anchorfile>structure_2tension_2main_8cc.html</anchorfile>
+      <anchor>a59c7625aa22cd8772a1952970f08cecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_THREADS</name>
+      <anchorfile>structure_2tension_2main_8cc.html</anchorfile>
+      <anchor>a7735206bdfad487588bba2126b806ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>structure_2tension_2main_8cc.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>main.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/torsion/</path>
+    <filename>structure_2torsion_2main_8cc</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DIMS</name>
+      <anchorfile>structure_2torsion_2main_8cc.html</anchorfile>
+      <anchor>a4ddd3ba5bd21eaaed12b0f39f346d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_QUAD_POINTS</name>
+      <anchorfile>structure_2torsion_2main_8cc.html</anchorfile>
+      <anchor>a59c7625aa22cd8772a1952970f08cecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_THREADS</name>
+      <anchorfile>structure_2torsion_2main_8cc.html</anchorfile>
+      <anchor>a7735206bdfad487588bba2126b806ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>structure_2torsion_2main_8cc.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>mark_plane.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/edge_dislocation/multiple/</path>
+    <filename>edge__dislocation_2multiple_2mark__plane_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>mark_plane.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/edge_dislocation/single/</path>
+    <filename>edge__dislocation_2single_2mark__plane_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>mark_plane.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/loop/</path>
+    <filename>loop_2mark__plane_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>mark_plane.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/multiple/</path>
+    <filename>screw_2multiple_2mark__plane_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>mark_plane.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/single/</path>
+    <filename>screw_2single_2mark__plane_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>assemble_system_interval.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/single/</path>
+    <filename>defects_2screw_2single_2assemble__system__interval_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>assemble_system_interval.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/src/</path>
+    <filename>defects_2src_2assemble__system__interval_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>assemble_system_interval.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/src/</path>
+    <filename>structure_2src_2assemble__system__interval_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>output.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/single/</path>
+    <filename>defects_2screw_2single_2output_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>output.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/src/</path>
+    <filename>defects_2src_2output_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>output.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/src/</path>
+    <filename>structure_2src_2output_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>run.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/single/</path>
+    <filename>defects_2screw_2single_2run_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>run.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/src/</path>
+    <filename>defects_2src_2run_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>run.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/src/</path>
+    <filename>structure_2src_2run_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>.h</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/example/</path>
+    <filename>_8h</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>DIMS</name>
+      <anchorfile>_8h.html</anchorfile>
+      <anchor>a4ddd3ba5bd21eaaed12b0f39f346d12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_QUAD_POINTS</name>
+      <anchorfile>_8h.html</anchorfile>
+      <anchor>a59c7625aa22cd8772a1952970f08cecf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>NUM_THREADS</name>
+      <anchorfile>_8h.html</anchorfile>
+      <anchor>a7735206bdfad487588bba2126b806ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>pi</name>
+      <anchorfile>_8h.html</anchorfile>
+      <anchor>a1daf785e3f68d293c7caa1c756d5cb74</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>residualForBodyforce.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/pointDefect/</path>
+    <filename>residual_for_bodyforce_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>getResidual.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/src/</path>
+    <filename>get_residual_8cc</filename>
+    <includes id="model__structure_8h" name="model_structure.h" local="yes" imported="no">model/model_structure.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>README.md</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/</path>
+    <filename>_r_e_a_d_m_e_8md</filename>
+  </compound>
+  <compound kind="file">
+    <name>IGA_dislocation.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/src/base/</path>
+    <filename>_i_g_a__dislocation_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>IGA_structure.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/src/base/</path>
+    <filename>_i_g_a__structure_8cc</filename>
+  </compound>
+  <compound kind="file">
+    <name>model_dislocation.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/src/model/dislocation/</path>
+    <filename>model__dislocation_8cc</filename>
+    <includes id="model__dislocation_8h" name="model_dislocation.h" local="yes" imported="no">model/model_dislocation.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>model_structure.cc</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/src/model/structure/</path>
+    <filename>model__structure_8cc</filename>
+    <includes id="model__structure_8h" name="model_structure.h" local="yes" imported="no">model/model_structure.h</includes>
+  </compound>
+  <compound kind="class">
+    <name>IGA_dislocation</name>
+    <filename>class_i_g_a__dislocation.html</filename>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>IGA_dislocation</name>
+      <anchorfile>class_i_g_a__dislocation.html</anchorfile>
+      <anchor>a7512632086a287a189f079d3d496a8b8</anchor>
+      <arglist>(NURBSMesh&lt; dim &gt; &amp;_mesh, parametersClass &amp;_params)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~IGA_dislocation</name>
+      <anchorfile>class_i_g_a__dislocation.html</anchorfile>
+      <anchor>a549a93137b1e52fe7acbe810123a2a63</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>run</name>
+      <anchorfile>class_i_g_a__dislocation.html</anchorfile>
+      <anchor>a13a43e6d814de94978c515cb084873b1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>apply_boundary_conditions</name>
+      <anchorfile>class_i_g_a__dislocation.html</anchorfile>
+      <anchor>a72e1e395cdead260975e3984de835cd6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>mark_plane</name>
+      <anchorfile>class_i_g_a__dislocation.html</anchorfile>
+      <anchor>a37b78b6287537f9507c02309238f1e2e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>output</name>
+      <anchorfile>class_i_g_a__dislocation.html</anchorfile>
+      <anchor>ad7fdae3b50f58fea6066a64ebd08db85</anchor>
+      <arglist>(unsigned int _cycle)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>assemble_system_interval</name>
+      <anchorfile>class_i_g_a__dislocation.html</anchorfile>
+      <anchor>a777c7dbe634f877f3b81c51d551c4d1f</anchor>
+      <arglist>(const typename std::vector&lt; knotSpan&lt; dim &gt; &gt;::iterator &amp;begin, const typename std::vector&lt; knotSpan&lt; dim &gt; &gt;::iterator &amp;end)</arglist>
+    </member>
+    <member kind="variable">
+      <type>model_dislocation&lt; Sacado::Fad::DFad&lt; double &gt;, dim &gt; *</type>
+      <name>dislocationModel</name>
+      <anchorfile>class_i_g_a__dislocation.html</anchorfile>
+      <anchor>a8149b2fd085fa3c6ec91d18114d73450</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>IGA_structure</name>
+    <filename>class_i_g_a__structure.html</filename>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>IGA_structure</name>
+      <anchorfile>class_i_g_a__structure.html</anchorfile>
+      <anchor>a9ede8428cadaeb3d557ee290a0f3cb2b</anchor>
+      <arglist>(NURBSMesh&lt; dim &gt; &amp;_mesh, parametersClass &amp;_params)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~IGA_structure</name>
+      <anchorfile>class_i_g_a__structure.html</anchorfile>
+      <anchor>a3ba7e4b4a6af6f81c80ba7024c168daa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>run</name>
+      <anchorfile>class_i_g_a__structure.html</anchorfile>
+      <anchor>a13a43e6d814de94978c515cb084873b1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>apply_boundary_conditions</name>
+      <anchorfile>class_i_g_a__structure.html</anchorfile>
+      <anchor>a72e1e395cdead260975e3984de835cd6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>output</name>
+      <anchorfile>class_i_g_a__structure.html</anchorfile>
+      <anchor>ad7fdae3b50f58fea6066a64ebd08db85</anchor>
+      <arglist>(unsigned int _cycle)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>assemble_system_interval</name>
+      <anchorfile>class_i_g_a__structure.html</anchorfile>
+      <anchor>a777c7dbe634f877f3b81c51d551c4d1f</anchor>
+      <arglist>(const typename std::vector&lt; knotSpan&lt; dim &gt; &gt;::iterator &amp;begin, const typename std::vector&lt; knotSpan&lt; dim &gt; &gt;::iterator &amp;end)</arglist>
+    </member>
+    <member kind="variable">
+      <type>model_structure&lt; Sacado::Fad::DFad&lt; double &gt;, dim &gt; *</type>
+      <name>structureModel</name>
+      <anchorfile>class_i_g_a__structure.html</anchorfile>
+      <anchor>a68af468664afb31f9e140a58bdba73a0</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>model_dislocation</name>
+    <filename>classmodel__dislocation.html</filename>
+    <templarg>T</templarg>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>model_dislocation</name>
+      <anchorfile>classmodel__dislocation.html</anchorfile>
+      <anchor>a87256c0c0fc529a4f9c9c13d6fd5dbf2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~model_dislocation</name>
+      <anchorfile>classmodel__dislocation.html</anchorfile>
+      <anchor>a8f94f7549c677e09caba46bdae39b074</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getResidual</name>
+      <anchorfile>classmodel__dislocation.html</anchorfile>
+      <anchor>a7ce5374d8af7b9033ea8f867d98140ad</anchor>
+      <arglist>(knotSpan&lt; dim &gt; &amp;cell, IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 1, T &gt; &amp;R, unsigned int currentIteration)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>residualForDislocation</name>
+      <anchorfile>classmodel__dislocation.html</anchorfile>
+      <anchor>a3092adf1cc59929a665fc6301c7fe4ff</anchor>
+      <arglist>(knotSpan&lt; dim &gt; &amp;cell, IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 1, T &gt; &amp;R)</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>b</name>
+      <anchorfile>classmodel__dislocation.html</anchorfile>
+      <anchor>a1510a66dacf9cf3586de5fc89ae2a073</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>model_structure</name>
+    <filename>classmodel__structure.html</filename>
+    <templarg>T</templarg>
+    <templarg>dim</templarg>
+    <member kind="function">
+      <type></type>
+      <name>model_structure</name>
+      <anchorfile>classmodel__structure.html</anchorfile>
+      <anchor>ae705c01fded2cf3c048bbe72c4b67fdc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~model_structure</name>
+      <anchorfile>classmodel__structure.html</anchorfile>
+      <anchor>a562378725cfa494ac122e24560016e4a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>getResidual</name>
+      <anchorfile>classmodel__structure.html</anchorfile>
+      <anchor>a7ce5374d8af7b9033ea8f867d98140ad</anchor>
+      <arglist>(knotSpan&lt; dim &gt; &amp;cell, IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 1, T &gt; &amp;R, unsigned int currentIteration)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>residualForNewmmanBC</name>
+      <anchorfile>classmodel__structure.html</anchorfile>
+      <anchor>a7e743082d35d0bdb8ecc6365a2f91cfa</anchor>
+      <arglist>(knotSpan&lt; dim &gt; &amp;cell, IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 1, T &gt; &amp;R)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>residualForBodyforce</name>
+      <anchorfile>classmodel__structure.html</anchorfile>
+      <anchor>a5aa1a09d5eea4eae1ec54c89bcff7d77</anchor>
+      <arglist>(knotSpan&lt; dim &gt; &amp;cell, IGAValues&lt; dim &gt; &amp;fe_values, dealii::Table&lt; 1, T &gt; &amp;ULocal, dealii::Table&lt; 1, T &gt; &amp;R)</arglist>
+    </member>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/src/base</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/src/base/</path>
+    <filename>dir_ed49be592c481a6fa1573cb4d0e54d90.html</filename>
+    <file>IGA_dislocation.cc</file>
+    <file>IGA_structure.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/include/base</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/include/base/</path>
+    <filename>dir_ff25058a1bb5a72adaad7d4c3231eb9a.html</filename>
+    <file>IGA_dislocation.h</file>
+    <file>IGA_structure.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/structure/bending</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/bending/</path>
+    <filename>dir_5a5387f7249dd73db3cc97effd4d943f.html</filename>
+    <file>apply_boundary_conditions.cc</file>
+    <file>main.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/defects</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/</path>
+    <filename>dir_cfce05e1b6b7246764d9cc78d0f878a2.html</filename>
+    <dir>defectsElasticity/initBoundValProbs/defects/edge_dislocation</dir>
+    <dir>defectsElasticity/initBoundValProbs/defects/loop</dir>
+    <dir>defectsElasticity/initBoundValProbs/defects/screw</dir>
+    <dir>defectsElasticity/initBoundValProbs/defects/src</dir>
+    <file>bFitting.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/</path>
+    <filename>dir_df136d4a8e92b3c7d5c0627eb7e8cb8d.html</filename>
+    <dir>defectsElasticity/include</dir>
+    <dir>defectsElasticity/initBoundValProbs</dir>
+    <dir>defectsElasticity/src</dir>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/src/model/dislocation</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/src/model/dislocation/</path>
+    <filename>dir_930f813fe73403b70380f439c9247d84.html</filename>
+    <file>model_dislocation.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/defects/edge_dislocation</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/edge_dislocation/</path>
+    <filename>dir_806915ab438eece7dca63ea83be64a76.html</filename>
+    <dir>defectsElasticity/initBoundValProbs/defects/edge_dislocation/multiple</dir>
+    <dir>defectsElasticity/initBoundValProbs/defects/edge_dislocation/single</dir>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/example</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/example/</path>
+    <filename>dir_c5e9da4814fbe9fe70f5b5d3ff3eb8bd.html</filename>
+    <file>.h</file>
+    <file>main.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/include</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/include/</path>
+    <filename>dir_7e9b4f9e65a6f88eac16d45d5615241a.html</filename>
+    <dir>defectsElasticity/include/base</dir>
+    <dir>defectsElasticity/include/model</dir>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/</path>
+    <filename>dir_bfa9a4bcab372c0a21dc3ae9fe6dcc8b.html</filename>
+    <dir>defectsElasticity/initBoundValProbs/defects</dir>
+    <dir>defectsElasticity/initBoundValProbs/example</dir>
+    <dir>defectsElasticity/initBoundValProbs/structure</dir>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/defects/loop</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/loop/</path>
+    <filename>dir_c59c4a07b1c6beedbab998c42ec15dea.html</filename>
+    <file>apply_boundary_conditions.cc</file>
+    <file>main.cc</file>
+    <file>mark_plane.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/src/model</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/src/model/</path>
+    <filename>dir_78962c174527027adeaa16f9a9a63934.html</filename>
+    <dir>defectsElasticity/src/model/dislocation</dir>
+    <dir>defectsElasticity/src/model/structure</dir>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/include/model</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/include/model/</path>
+    <filename>dir_767656a652bcdd992da7c9405be92e82.html</filename>
+    <file>model_dislocation.h</file>
+    <file>model_structure.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/defects/screw/multiple</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/multiple/</path>
+    <filename>dir_2cf1aff67356569f474d27c86a775f1e.html</filename>
+    <file>apply_boundary_conditions.cc</file>
+    <file>main.cc</file>
+    <file>mark_plane.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/defects/edge_dislocation/multiple</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/edge_dislocation/multiple/</path>
+    <filename>dir_9b70760f43fbb5a4929c4513803831b1.html</filename>
+    <file>apply_boundary_conditions.cc</file>
+    <file>main.cc</file>
+    <file>mark_plane.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/structure/pointDefect</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/pointDefect/</path>
+    <filename>dir_d38daf4112f0b0a0f67bbc0a733bd0b0.html</filename>
+    <file>apply_boundary_conditions.cc</file>
+    <file>main.cc</file>
+    <file>residualForBodyforce.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/defects/screw</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/</path>
+    <filename>dir_b567e50ba2b2a58ec41ec65a2ec9f8d1.html</filename>
+    <dir>defectsElasticity/initBoundValProbs/defects/screw/multiple</dir>
+    <dir>defectsElasticity/initBoundValProbs/defects/screw/single</dir>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/defects/screw/single</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/screw/single/</path>
+    <filename>dir_1d7bf7b0e5978fd2f954dbfc7d69d5bd.html</filename>
+    <file>apply_boundary_conditions.cc</file>
+    <file>assemble_system_interval.cc</file>
+    <file>main.cc</file>
+    <file>mark_plane.cc</file>
+    <file>output.cc</file>
+    <file>run.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/defects/edge_dislocation/single</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/edge_dislocation/single/</path>
+    <filename>dir_bc0d3287641e05342a8ca03f50b02413.html</filename>
+    <file>apply_boundary_conditions.cc</file>
+    <file>main.cc</file>
+    <file>mark_plane.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/src</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/src/</path>
+    <filename>dir_359bb00156804399f2af3c7def430c70.html</filename>
+    <dir>defectsElasticity/src/base</dir>
+    <dir>defectsElasticity/src/model</dir>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/structure/src</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/src/</path>
+    <filename>dir_5614084b7f6189052a9e5e01a4106fd3.html</filename>
+    <file>assemble_system_interval.cc</file>
+    <file>getResidual.cc</file>
+    <file>output.cc</file>
+    <file>run.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/defects/src</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/defects/src/</path>
+    <filename>dir_eb573e073921c4a297dcac0a3c589eba.html</filename>
+    <file>assemble_system_interval.cc</file>
+    <file>output.cc</file>
+    <file>run.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/src/model/structure</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/src/model/structure/</path>
+    <filename>dir_3057bdd3b0500cc6475b35eab18efe1f.html</filename>
+    <file>model_structure.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/structure</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/</path>
+    <filename>dir_d600bb8ca28f62a193b001832c620872.html</filename>
+    <dir>defectsElasticity/initBoundValProbs/structure/bending</dir>
+    <dir>defectsElasticity/initBoundValProbs/structure/pointDefect</dir>
+    <dir>defectsElasticity/initBoundValProbs/structure/src</dir>
+    <dir>defectsElasticity/initBoundValProbs/structure/tension</dir>
+    <dir>defectsElasticity/initBoundValProbs/structure/torsion</dir>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/structure/tension</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/tension/</path>
+    <filename>dir_9e141697605ccc7366327eb6ab88bc70.html</filename>
+    <file>apply_boundary_conditions.cc</file>
+    <file>main.cc</file>
+  </compound>
+  <compound kind="dir">
+    <name>defectsElasticity/initBoundValProbs/structure/torsion</name>
+    <path>/home/wzhenlin/workspace/GitHub/defectsElasticity/initBoundValProbs/structure/torsion/</path>
+    <filename>dir_ede8b513425c25f464c01afca130e447.html</filename>
+    <file>apply_boundary_conditions.cc</file>
+    <file>main.cc</file>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title></title>
+    <filename>index</filename>
+  </compound>
+</tagfile>

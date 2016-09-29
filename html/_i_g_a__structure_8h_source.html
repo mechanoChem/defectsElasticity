@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IGA_structure.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_i_g_a__structure_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="_i_g_a__structure_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*base class for structure boundary value problem </span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*derived from IGA</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*/</span></div>
@@ -103,14 +103,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_i_g_a__structure.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_g_a__structure.html">IGA_structure</a>: <span class="keyword">public</span> IGA&lt;dim&gt;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    /**</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    *IGA_structure constructor and destructor</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    */</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="class_i_g_a__structure.html">IGA_structure</a>(NURBSMesh&lt;dim&gt;&amp; _mesh, parametersClass&amp; _params);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  ~<a class="code" href="class_i_g_a__structure.html">IGA_structure</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    /**</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    *the comments of following functions can be found at IGA_dislocation.h</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    *Please see .cc file directly </span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    */</span></div>
@@ -118,8 +118,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">void</span> apply_boundary_conditions();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">void</span> output (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _cycle);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">void</span> assemble_system_interval (<span class="keyword">const</span> <span class="keyword">typename</span> std::vector&lt;knotSpan&lt;dim&gt; &gt;::iterator &amp;begin, <span class="keyword">const</span> <span class="keyword">typename</span> std::vector&lt;knotSpan&lt;dim&gt; &gt;::iterator &amp;end);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    /**</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    *include model type</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    */</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_i_g_a__structure.html#a68af468664afb31f9e140a58bdba73a0">   35</a></span>&#160;    <a class="code" href="classmodel__structure.html">model_structure&lt;Sacado::Fad::DFad&lt;double&gt;</a>,dim&gt;* <a class="code" href="class_i_g_a__structure.html#a68af468664afb31f9e140a58bdba73a0">structureModel</a>;</div>

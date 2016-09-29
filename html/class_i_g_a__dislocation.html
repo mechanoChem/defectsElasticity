@@ -149,6 +149,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>IGA_dislocation constructor </p>
 
 </div>
 </div>
@@ -164,6 +165,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>IGA_dislocation destructor </p>
 
 </div>
 </div>
@@ -180,6 +182,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>apply dirchlet boundary condition User may change it accordingly and add neumman boundary condition if needed for applying neumman boundary condition please see example of structure problem </p>
 
 </div>
 </div>
@@ -206,6 +209,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>this function assembles jacobian and righ hand side use "dislocationModel" defined in "run" User may use it directly </p>
 
 </div>
 </div>
@@ -221,6 +225,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Essential to dislocation represented by force dipole please see mark_plane.cc for specific implementation Mark special plane and defects flags We have 7 slots in planeFlags. 0-5 denotes 6 planes. 6: denote plane inside cell or just cell surface. planeFlags[i]=1:i:normal vector of plane; 1-&gt;negtive half plane; =2-&gt;postive plane;i=0-5 planeFlags[6]=1 mark plane inside of cell. planeFlags[6]=0 (default) mark plane on cell surface. using Sp_planeQuad_Point to specify the position of plane inside of cell. NOTE: planed marked should be compatible with mesh for accuracy: e.g. the upper half plane and lower half plane may be separated by element edge</p>
+<p>We have 6 slots in defectFlags. 0-2 for direction of burger vector. 3:TBD 4:edge, 5:screw defectFlags[i]=n: i:direction of burger vector, n:number of half planes overlaped. i&lt;=2; </p>
 
 </div>
 </div>
@@ -237,6 +243,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>this function generates vtk file User may use it directly </p>
 
 </div>
 </div>
@@ -252,6 +259,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>entrance of run IGA_dislocation User may use it directly </p>
 
 </div>
 </div>
@@ -265,6 +273,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>include model type </p>
 
 </div>
 </div>
