@@ -98,76 +98,73 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define IGA_dislocationClass_h</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;IGA.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//method</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="model__dislocation_8h.html">model/model_dislocation.h</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_i_g_a__dislocation.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_g_a__dislocation.html">IGA_dislocation</a>: <span class="keyword">public</span> IGA&lt;dim&gt;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:<span class="comment"></span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    *IGA_dislocation constructor</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="class_i_g_a__dislocation.html">IGA_dislocation</a> (NURBSMesh&lt;dim&gt;&amp; _mesh, parametersClass&amp; _params);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    *IGA_dislocation destructor</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  ~<a class="code" href="class_i_g_a__dislocation.html">IGA_dislocation</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    *entrance of run IGA_dislocation</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    *User may use it directly</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">void</span> run();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    *apply dirchlet boundary condition</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    *User may change it accordingly and add neumman boundary condition if needed</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    *for applying neumman boundary condition please see example of structure problem  </span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> apply_boundary_conditions();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">    *Essential to dislocation represented by force dipole</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    *please see mark_plane.cc for specific implementation</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    *Mark special plane and defects flags</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    *We have 7 slots in planeFlags. 0-5 denotes 6 planes. 6: denote plane inside cell or just cell surface. </span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    *planeFlags[i]=1:i:normal vector of plane;  1-&gt;negtive half plane; =2-&gt;postive plane;i=0-5</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    *planeFlags[6]=1 mark plane inside of cell. planeFlags[6]=0 (default) mark plane on cell surface.</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    *using Sp_planeQuad_Point to specify the position of plane inside of cell.</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    *NOTE: planed marked should be compatible with mesh for accuracy:</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">    * e.g. the upper half plane and lower half plane may be separated by element edge</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    * </span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">    *We have 6 slots in defectFlags. 0-2 for direction of burger vector. 3:TBD 4:edge, 5:screw</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">    *defectFlags[i]=n: i:direction of burger vector, n:number of half planes overlaped. i&lt;=2;</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">    * </span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">void</span> mark_plane();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">    *this function generates vtk file</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">    *User may use it directly</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> output (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _cycle);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment"></span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    *this function assembles jacobian and righ hand side </span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    *use &quot;dislocationModel&quot; defined in &quot;run&quot;</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    *User may use it directly</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">void</span> assemble_system_interval (<span class="keyword">const</span> <span class="keyword">typename</span> std::vector&lt;knotSpan&lt;dim&gt; &gt;::iterator &amp;begin, <span class="keyword">const</span> <span class="keyword">typename</span> std::vector&lt;knotSpan&lt;dim&gt; &gt;::iterator &amp;end);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment"></span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">    *include model type</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_i_g_a__dislocation.html#a8149b2fd085fa3c6ec91d18114d73450">   74</a></span>&#160;    <a class="code" href="classmodel__dislocation.html">model_dislocation&lt;Sacado::Fad::DFad&lt;double&gt;</a>,dim&gt;* <a class="code" href="class_i_g_a__dislocation.html#a8149b2fd085fa3c6ec91d18114d73450">dislocationModel</a>; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_i_g_a__dislocation_html"><div class="ttname"><a href="class_i_g_a__dislocation.html">IGA_dislocation</a></div><div class="ttdef"><b>Definition:</b> IGA_dislocation.h:15</div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="model__dislocation_8h.html">model/model_dislocation.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span> dim&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_i_g_a__dislocation.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_i_g_a__dislocation.html">IGA_dislocation</a>: <span class="keyword">public</span> IGA&lt;dim&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:<span class="comment"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    *IGA_dislocation constructor</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="class_i_g_a__dislocation.html">IGA_dislocation</a> (NURBSMesh&lt;dim&gt;&amp; _mesh, parametersClass&amp; _params);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    *IGA_dislocation destructor</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  ~<a class="code" href="class_i_g_a__dislocation.html">IGA_dislocation</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    *entrance of run IGA_dislocation</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    *User may use it directly</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">void</span> run();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    *apply dirchlet boundary condition</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    *User may change it accordingly and add neumman boundary condition if needed</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    *for applying neumman boundary condition please see example of structure problem  </span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">void</span> apply_boundary_conditions();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">    *Essential to dislocation represented by force dipole</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">    *please see mark_plane.cc for specific implementation</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    *Mark special plane and defects flags</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    *We have 7 slots in planeFlags. 0-5 denotes 6 planes. 6: denote plane inside cell or just cell surface. </span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">    *planeFlags[i]=1:i:normal vector of plane;  1-&gt;negtive half plane; =2-&gt;postive plane;i=0-5</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    *planeFlags[6]=1 mark plane inside of cell. planeFlags[6]=0 (default) mark plane on cell surface.</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    *using Sp_planeQuad_Point to specify the position of plane inside of cell.</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    *NOTE: planed marked should be compatible with mesh for accuracy:</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">    * e.g. the upper half plane and lower half plane may be separated by element edge</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">    *We have 6 slots in defectFlags. 0-2 for direction of burger vector. 3:TBD 4:edge, 5:screw</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">    *defectFlags[i]=n: i:direction of burger vector, n:number of half planes overlaped. i&lt;=2;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> mark_plane();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">    *this function generates vtk file</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    *User may use it directly</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">void</span> output (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _cycle);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    *this function assembles jacobian and righ hand side </span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    *use &quot;dislocationModel&quot; defined in &quot;run&quot;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">    *User may use it directly</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">void</span> assemble_system_interval (<span class="keyword">const</span> <span class="keyword">typename</span> std::vector&lt;knotSpan&lt;dim&gt; &gt;::iterator &amp;begin, <span class="keyword">const</span> <span class="keyword">typename</span> std::vector&lt;knotSpan&lt;dim&gt; &gt;::iterator &amp;end);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment"></span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">    *include model type</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_i_g_a__dislocation.html#a8149b2fd085fa3c6ec91d18114d73450">   71</a></span>&#160;    <a class="code" href="classmodel__dislocation.html">model_dislocation&lt;Sacado::Fad::DFad&lt;double&gt;</a>,dim&gt;* <a class="code" href="class_i_g_a__dislocation.html#a8149b2fd085fa3c6ec91d18114d73450">dislocationModel</a>; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_i_g_a__dislocation_html"><div class="ttname"><a href="class_i_g_a__dislocation.html">IGA_dislocation</a></div><div class="ttdef"><b>Definition:</b> IGA_dislocation.h:14</div></div>
 <div class="ttc" id="classmodel__dislocation_html"><div class="ttname"><a href="classmodel__dislocation.html">model_dislocation</a></div><div class="ttdef"><b>Definition:</b> model_dislocation.h:12</div></div>
-<div class="ttc" id="class_i_g_a__dislocation_html_a8149b2fd085fa3c6ec91d18114d73450"><div class="ttname"><a href="class_i_g_a__dislocation.html#a8149b2fd085fa3c6ec91d18114d73450">IGA_dislocation::dislocationModel</a></div><div class="ttdeci">model_dislocation&lt; Sacado::Fad::DFad&lt; double &gt;, dim &gt; * dislocationModel</div><div class="ttdef"><b>Definition:</b> IGA_dislocation.h:74</div></div>
+<div class="ttc" id="class_i_g_a__dislocation_html_a8149b2fd085fa3c6ec91d18114d73450"><div class="ttname"><a href="class_i_g_a__dislocation.html#a8149b2fd085fa3c6ec91d18114d73450">IGA_dislocation::dislocationModel</a></div><div class="ttdeci">model_dislocation&lt; Sacado::Fad::DFad&lt; double &gt;, dim &gt; * dislocationModel</div><div class="ttdef"><b>Definition:</b> IGA_dislocation.h:71</div></div>
 <div class="ttc" id="model__dislocation_8h_html"><div class="ttname"><a href="model__dislocation_8h.html">model_dislocation.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
