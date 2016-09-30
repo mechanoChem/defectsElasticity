@@ -8,7 +8,6 @@
 #define IGA_dislocationClass_h
 
 #include "IGA.h"
-//method
 #include "model/model_dislocation.h"
 using namespace std;
 template <int dim>
@@ -48,10 +47,8 @@ public:
 	*using Sp_planeQuad_Point to specify the position of plane inside of cell.
 	*NOTE: planed marked should be compatible with mesh for accuracy:
 	* e.g. the upper half plane and lower half plane may be separated by element edge
-	* 
 	*We have 6 slots in defectFlags. 0-2 for direction of burger vector. 3:TBD 4:edge, 5:screw
 	*defectFlags[i]=n: i:direction of burger vector, n:number of half planes overlaped. i<=2;
-	* 
 	*/
   void mark_plane();
 	
