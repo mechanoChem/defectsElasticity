@@ -21,6 +21,21 @@ defectsElasticity code is an isogeometric analysis based code, for solving the p
 The code is based on openIGA lib [https://github.com/mechanoChem/openIGA]
 
 
+Usage
+=======================================================================
+1) download and install openIGA [https://github.com/mechanoChem/openIGA]
+
+2) download defectElasticity code
+
+3) modify code as necessary; initBoundValueProblems contains templates for defects problem and structure problem
+
+4) modify CmakeLists.txt, it also contains more details about code.
+
+5) $cmake CmakeLists.txt
+
+6) $make run
+
+
 Version information
 =======================================================================
 This is version 0.1, the intial release of the code.
@@ -39,19 +54,6 @@ This code has been developed under the support of the following:
 2. NSF DMREF grant: DMR1436154 “DMREF: Integrated Computational Framework for Designing Dynamically Controlled Alloy-Oxide Heterostructures”.
 
 
-Usage
-=======================================================================
-1) download and install openIGA [https://github.com/mechanoChem/openIGA]
-
-2) download defectElasticity code
-
-3) modify code as necessary; initBoundValueProblems contains templates for defects problem and structure problem
-
-4) modify CmakeLists.txt 
-
-5) $cmake CmakeLists.txt
-
-6) $make run
 
 
 Reference

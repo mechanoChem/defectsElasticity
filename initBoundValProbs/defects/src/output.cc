@@ -19,8 +19,7 @@ void IGA_dislocation<dim>::output (unsigned int _cycle){
   }
 	IGA<dim>::outputVariables.push_back(&displacement);
   char fileName[200];
-	fileName=this->getString("output_path").c_str();
-  //std::sprintf (fileName, this->getString("output_path").c_str());
+  std::sprintf (fileName, "%s/output-%u.vtk",this->getString("output_path").c_str(), cycle);
   std::cout<<"begin write mesh"<<std::endl;
   std::vector<int> outputGridSize(dim,10);
   writeMesh<dim>(fileName, _cycle, IGA<dim>::mesh, outputGridSize, IGA<dim>::outputVariables);

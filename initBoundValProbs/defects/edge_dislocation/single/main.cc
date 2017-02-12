@@ -47,6 +47,7 @@ int main(int argc, char *argv[]){
 	params.setDouble("initial_norm",0);
 	params.setDouble("current_norm",0);
 	params.setDouble("max_iteration",3);
+	params.setString("output_path", "output0");
 	
   printf("reading environmental variables...\n");
   //NURBS file prefix

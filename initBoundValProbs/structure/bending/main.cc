@@ -55,7 +55,7 @@ int main(int argc, char *argv[]){
 	params.setDouble("max_iteration",3);
 	
 	//output path default:current folder
-	params.setString("output_path", "output0");
+	params.setString("output_path", "../output");
 	
   printf("reading environmental variables...\n");
   //NURBS file prefix
