@@ -89,15 +89,17 @@ void model_dislocation<T, dim>::residualForDislocation(knotSpan<dim>& cell, IGAV
 }
 
 template <class T, int dim>
-void model_dislocation<T, dim>::residualForPointDefect(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R, dealii:Point<dim> _quadPoints, dealii:Point<dim> strength)
+void model_dislocation<T, dim>::residualForPointDefect(NURBSMesh<dim>* _mesh,knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R, dealii::Point<dim> _quadPoints, dealii::Point<dim> strength)
 {
+  unsigned int dofs_per_cell= fe_values.dofs_per_cell;
  	if (std::strcmp(this->bcType,"dislocation")!=0) {printf("Imcompatible Model and BC "); exit(-1);}
-  IGAValues<dim> fe_values_temp(mesh, dim, 0);
-  std::vector<std::vector<double> > quadPoints(1);
+  IGAValues<dim> fe_values_temp(_mesh, dim, 0);
+   std::vector<std::vector<double> > quadPoints(1);
   quadPoints[0].push_back(_quadPoints[0]); quadPoints[0].push_back(_quadPoints[1]); quadPoints[0].push_back(_quadPoints[2]); quadPoints[0].push_back(2.0);
+  std::cout<<"quadPoints"<<quadPoints[0][0]<<quadPoints[0][3]<<std::endl;
   fe_values_temp.reinit(cell, &quadPoints);
   for (unsigned int dof=0; dof<dofs_per_cell; ++dof) {
-		const unsigned int ck = fe_values.system_to_component_index(dof) - DOF;
+		const unsigned int ck = fe_values.system_to_component_index(dof);
     for (unsigned int q=0; q<1; ++q){
 			if (ck==2){ R[dof] += -fe_values_temp.shape_grad(dof, q)[2]*strength[2];}
 			else if(ck==1) { R[dof] += -fe_values_temp.shape_grad(dof, q)[1]*strength[1];}

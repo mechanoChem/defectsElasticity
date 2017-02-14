@@ -39,10 +39,11 @@ void IGA_dislocation<dim>::assemble_system_interval (const typename std::vector<
 		dislocationModel->residualForMechanics(*cell, fe_values, ULocal, R);
 		
 		//make vectors for quadPoints and strength for doing multiple pointDefects
-	  if (cell.defectFlags[3]==1]) {
+	  if (cell->defectFlags[3]==1){
+	    std::cout<<"dd"<<std::endl;
 			dealii::Point<dim> quadPoints=IGA<dim>::params.getPoint("DefectQuad1");
-			dealii::Point<dim> strengh=IGA<dim>::params.getPoint("DefectStrength1");
-			dislocationModel->residualForPointDefect(*cell, fe_values, ULocal, R, quadPoints,strength);
+			dealii::Point<dim> strength=IGA<dim>::params.getPoint("DefectStrength1");
+			dislocationModel->residualForPointDefect(IGA<dim>::mesh, *cell, fe_values, ULocal, R, quadPoints,strength);
 		}
 		//if (this->params->getBool("enforceWeakBC")) residualForHighOrderBC(cell,fe_values, ULocal, R);
 		

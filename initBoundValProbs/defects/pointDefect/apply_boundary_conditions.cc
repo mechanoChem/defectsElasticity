@@ -9,7 +9,7 @@
 using namespace std;
 
 template <int dim>
-void IGA_structure<dim>::apply_boundary_conditions(){
+void IGA_dislocation<dim>::apply_boundary_conditions(){
   //Dirichlet map
   IGA<dim>::dirichletMap.clear(); 
   unsigned int  controlPointDOF=-dim;
@@ -30,6 +30,6 @@ void IGA_structure<dim>::apply_boundary_conditions(){
 	std::cout<<"finished BC"<<std::endl;
 }
 
-template class IGA_structure<1>;
-template class IGA_structure<2>;
-template class IGA_structure<3>;
+template class IGA_dislocation<1>;
+template class IGA_dislocation<2>;
+template class IGA_dislocation<3>;

@@ -19,9 +19,10 @@ template <int dim>
 void IGA_dislocation<dim>::mark_plane(){
   for (typename std::vector<knotSpan<dim> >::iterator cell=IGA<dim>::mesh->knotSpanVector.begin(); cell<IGA<dim>::mesh->knotSpanVector.end(); cell++){
     //number 1 pointDefect at center
-	  if (cell.endKnots[0][0]<0.5 and cell.endKnots[0][1]>0.5 and cell.endKnots[1][0]<0.5 and cell.endKnots[1][1]>0.5 and cell.endKnots[2][0]<0.5 and cell.end\
-	Knots[2][1]>0.5){
-		cell.cell.defectFlags[3]==1;//let 1 :is number of pointDefects
+	  if (cell->endKnots[0][0]<0.5 and cell->endKnots[0][1]>0.5 and cell->endKnots[1][0]<0.55 and cell->endKnots[1][1]>0.55 and cell->endKnots[2][0]<0.5 and cell->endKnots[2][1]>0.5){
+	    std::cout<<"ccc"<<std::endl;
+		cell->defectFlags[3]=1;//let 1 :is number of pointDefects
+	  }
   }
 }
 
