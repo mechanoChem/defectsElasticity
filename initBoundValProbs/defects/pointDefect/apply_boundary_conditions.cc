@@ -4,7 +4,7 @@
 *User may change it accordingly 
 */
 
-#include "initBoundValueProb/IGA_structure.h"
+#include "initBoundValueProb/IGA_dislocation.h"
 
 using namespace std;
 

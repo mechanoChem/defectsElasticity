@@ -1,10 +1,3 @@
-/**
-*IGA_dislocation<dim>::apply_boundary_conditions
-*apply dirchlet boundary condition
-*User may change it accordingly and add neumman boundary condition if needed
-*for applying neumman boundary condition please see example of structure problem  
-*/
-
 #include "initBoundValueProb/IGA_dislocation.h"
 
 using namespace std;

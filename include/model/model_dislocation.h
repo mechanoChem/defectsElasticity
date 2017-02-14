@@ -21,13 +21,14 @@ class model_dislocation : public model<T, dim>
 	/*
 	*function to call all evaluate residual term
 	*/
-	void getResidual(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R,unsigned int currentIteration);
+	void getResidualIni(dealii::Table<1, T >& R,unsigned int currentIteration);
 	
 	/*
 	*evaluate residual term at element level for dislocations representing by force dipole
 	*edge, srew and dislocation loop should be properly described in "IGA_dislocation::mark_plane" 
 	*/
-	void residualForDislocation(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R);
+	void residualForDislocation(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R, double b);
+	void residualForPointDefect(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R, dealii:Point<dim> _quadPoints, dealii:Point<dim> strength);
 	
 	/*
 	*burger vector of dislcoation

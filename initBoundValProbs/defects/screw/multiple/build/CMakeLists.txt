@@ -4,11 +4,14 @@
 
 #Code structure and usage
 ##---------------------------------------------------------------------------------------------------------------------
-#The code is basded on openIGA and contains two level 
+#The code is basded on openIGA and contains three level 
 #level 1:generic code for initial boundary value problem, you do not need to change anything inside follow folders
 #--        defectsElasticity/src  defectsElasticity/include
 #
-#level 2:code for implementing specific defects type, change them as you need 
+#level 2:generic code for defects modling, usually you do not need to change anything inside follow folder 
+#--        defectsElasticity/initBoundValProbs/defects/src
+#
+#level 3:code for implementing specific defects type, change them as you need 
 #--        defectsElasticity/initBoundValProbs/defects/edge_dislication/single/  .....
 #
 # Usage
@@ -71,14 +74,15 @@ SET (SUPERLU_LIB "/home/snverner/software/SuperLU_4.3/lib/libsuperlu_4.3.a")
 
 #Include all source files
 ##---------------------------------------------------------------------------------------------------------------------
-#set shortcut for three directories
+#set shortcut for three directories (two source file folder and one head file folders)
 SET(src_DIR "/home/snverner/workspace/Defect2/src")
 SET(src_INC "/home/snverner/workspace/Defect2/include")
+SET(srcDefect_DIR "/home/snverner/workspace/Defect2/initBoundValProbs/defects/src")
 
 
 #Include all source files, usually you do NOT need to change anything below if code structure is not modified.
 
-FILE (GLOB TARGET_SRC "../*.cc", "${src_DIR}/model/dislocation/*.cc" "${src_DIR}/base/IGA_dislocation.cc" )
+FILE (GLOB TARGET_SRC "../*.cc", "${srcDefect_DIR}/*.cc", "${src_DIR}/model/dislocation/*.cc" "${src_DIR}/base/IGA_dislocation.cc" )
 ##---------------------------------------------------------------------------------------------------------------------
 
 

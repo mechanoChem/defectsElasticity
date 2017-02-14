@@ -5,7 +5,7 @@
 //planeFlags[6]=1 mark plane inside of cell. planeFlags[6]=0 (default) mark plane on cell surface.
 //using Sp_planeQuad_Point to specify the position of plane inside of cell.
 // 
-//We have 6 slots in defectFlags. 0-2 for direction of burger vector. 3:TBD 4:edge, 5:screw
+//We have 6 slots in defectFlags. 0-2 for direction of burger vector. 3:PointDefects 4:edge, 5:screw
 //defectFlags[i]=n: i:direction of burger vector, n:number of half planes overlaped. i<=2;
 //
 // 
@@ -18,20 +18,10 @@ using namespace std;
 template <int dim>
 void IGA_dislocation<dim>::mark_plane(){
   for (typename std::vector<knotSpan<dim> >::iterator cell=IGA<dim>::mesh->knotSpanVector.begin(); cell<IGA<dim>::mesh->knotSpanVector.end(); cell++){
-    
-		//screw dislocation at center
-		if(cell->endKnots[0][1]>0.5 and cell->endKnots[0][0]<0.5 and cell->endKnots[1][0]>=0.5) {
-			cell->planeFlags[0*2+1]=2; cell->planeFlags[6]=1; cell->Sp_planeQuad_Point=0;
-			cell->defectFlags[5]=1;
-		  cell->defectFlags[2]=cell->defectFlags[2]+1;   
-		}
-		if(cell->endKnots[0][1]>0.5 and cell->endKnots[0][0]<0.5 and cell->endKnots[1][0]<=0.5) {
-			cell->planeFlags[0*2+1]=1; cell->planeFlags[6]=1; cell->Sp_planeQuad_Point=0;
-			cell->defectFlags[5]=1;
-		  cell->defectFlags[2]=cell->defectFlags[2]+1;   
-		}
-		//add more half plane for multiple screw dislocations
-		
+    //number 1 pointDefect at center
+	  if (cell.endKnots[0][0]<0.5 and cell.endKnots[0][1]>0.5 and cell.endKnots[1][0]<0.5 and cell.endKnots[1][1]>0.5 and cell.endKnots[2][0]<0.5 and cell.end\
+	Knots[2][1]>0.5){
+		cell.cell.defectFlags[3]==1;//let 1 :is number of pointDefects
   }
 }
 

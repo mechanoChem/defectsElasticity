@@ -14,34 +14,14 @@ model_dislocation<T, dim>::model_dislocation():model<T,dim>()
 template <class T, int dim>
 model_dislocation<T, dim>::~model_dislocation (){}
 
-template <class T, int dim>
-void model_dislocation<T, dim>::getResidual(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R,unsigned int currentIteration)
-{
-	//clean R check 
-
-	unsigned int dofs_per_cell= fe_values.dofs_per_cell;
-  for (unsigned int dof=0; dof<dofs_per_cell; ++dof) {
-    if (abs(R[dof].val())>1.0e-13){
-    	printf("**************Residual is contaminated**************. Value: %12.4e\n", R[dof].val());
-			printf("\n"); exit(-1);
-    }
-	}
-	this->iteration=currentIteration;
-	
-	residualForMechanics(cell, fe_values, ULocal, R);
-	residualForDislocation(cell, fe_values, ULocal, R);
-	  if (this->params->getBool("enforceWeakBC")) residualForHighOrderBC(cell,fe_values, ULocal, R);
-}
-
 /*
 *residualForDislocation
 *evaluate residual term at element level for dislocations representing by force dipole
 *edge, srew and dislocation loop should be properly described in "IGA_dislocation::mark_plane" 
 */
 template <class T, int dim>
-void model_dislocation<T, dim>::residualForDislocation(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R)
+void model_dislocation<T, dim>::residualForDislocation(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R, double b)
 {
-	b=this->params->getDouble("b");
   unsigned int dofs_per_cell= fe_values.dofs_per_cell;
 	  //apply edgedislocation.
 	if (std::strcmp(this->bcType,"dislocation")!=0) {printf("Imcompatible Model and BC "); exit(-1);}
@@ -105,6 +85,24 @@ void model_dislocation<T, dim>::residualForDislocation(knotSpan<dim>& cell, IGAV
 				}
 			}
 		}		
+	}
+}
+
+template <class T, int dim>
+void model_dislocation<T, dim>::residualForPointDefect(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R, dealii:Point<dim> _quadPoints, dealii:Point<dim> strength)
+{
+ 	if (std::strcmp(this->bcType,"dislocation")!=0) {printf("Imcompatible Model and BC "); exit(-1);}
+  IGAValues<dim> fe_values_temp(mesh, dim, 0);
+  std::vector<std::vector<double> > quadPoints(1);
+  quadPoints[0].push_back(_quadPoints[0]); quadPoints[0].push_back(_quadPoints[1]); quadPoints[0].push_back(_quadPoints[2]); quadPoints[0].push_back(2.0);
+  fe_values_temp.reinit(cell, &quadPoints);
+  for (unsigned int dof=0; dof<dofs_per_cell; ++dof) {
+		const unsigned int ck = fe_values.system_to_component_index(dof) - DOF;
+    for (unsigned int q=0; q<1; ++q){
+			if (ck==2){ R[dof] += -fe_values_temp.shape_grad(dof, q)[2]*strength[2];}
+			else if(ck==1) { R[dof] += -fe_values_temp.shape_grad(dof, q)[1]*strength[1];}
+			else if(ck==0) { R[dof] += -fe_values_temp.shape_grad(dof, q)[0]*strength[0];}
+		}
 	}
 }
 

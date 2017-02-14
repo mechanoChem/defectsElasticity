@@ -17,7 +17,7 @@ public:
 	/**
 	*IGA_structure constructor and destructor
 	*/
-  IGA_structure(NURBSMesh<dim>& _mesh, parametersClass& _params);
+  IGA_structure(NURBSMesh<dim>& _mesh, parametersClass<dim>& _params);
   ~IGA_structure();
 	
 	/**

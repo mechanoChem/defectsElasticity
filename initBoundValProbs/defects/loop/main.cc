@@ -22,7 +22,7 @@ int main(int argc, char *argv[]){
   dealii::MultithreadInfo::set_thread_limit	(NUM_THREADS);
 
   //set material parameters genric 
-  parametersClass params;
+  parametersClass<DIMS> params;
   params.setDouble("lambda", 1.0);
   params.setDouble("mu", 1.0);
   params.setDouble("muSG", 1.0);
@@ -47,6 +47,7 @@ int main(int argc, char *argv[]){
 	params.setDouble("initial_norm",0);
 	params.setDouble("current_norm",0);
 	params.setDouble("max_iteration",3);
+	params.setString("output_path", "../output");
 	
   printf("reading environmental variables...\n");
   //NURBS file prefix
@@ -56,7 +57,7 @@ int main(int argc, char *argv[]){
 		
 
   char meshFile[100];
-	std::sprintf (meshFile, "/home/wzhenlin/workspace/meshes/defectsGradientElasicity/lineDefect/C1/IGAMesh%s.h5", filePrefix.c_str());
+	std::sprintf (meshFile, "../../../mesh/IGAMesh%s.h5", filePrefix.c_str());
   //readHDF5<DIMS>(meshFile, geometry); 
 
   //Read NURBS geometry  

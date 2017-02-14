@@ -34,9 +34,20 @@ void IGA_dislocation<dim>::assemble_system_interval (const typename std::vector<
     dealii::Table<1, Sacado::Fad::DFad<double> > R(dofs_per_cell); //R.fill(0.0);
     
     for(unsigned int i=0; i<dofs_per_cell; ++i) R[i]=0.0; 
-		//dislocation
-		dislocationModel->getResidual(*cell, fe_values, ULocal, R, IGA<dim>::currentIteration);
-			
+		//gradient elasticity
+		dislocationModel->getResidualIni(R, IGA<dim>::currentIteration);
+		dislocationModel->residualForMechanics(*cell, fe_values, ULocal, R);
+		
+		//make vectors for quadPoints and strength for doing multiple pointDefects
+	  if (cell.defectFlags[3]==1]) {
+			dealii::Point<dim> quadPoints=IGA<dim>::params.getPoint("DefectQuad1");
+			dealii::Point<dim> strengh=IGA<dim>::params.getPoint("DefectStrength1");
+			dislocationModel->residualForPointDefect(*cell, fe_values, ULocal, R, quadPoints,strength);
+		}
+		//if (this->params->getBool("enforceWeakBC")) residualForHighOrderBC(cell,fe_values, ULocal, R);
+		
+		
+		
     //Residual(R) and Jacobian(R')
     for (unsigned int i=0; i<dofs_per_cell; ++i) {
       for (unsigned int j=0; j<dofs_per_cell; ++j){

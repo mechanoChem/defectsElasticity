@@ -1,10 +1,3 @@
-/*
-*main file
-*parameters for numerical simulation (e.g. solver parameters) and material parameters are defined in one class
-*User could defined two separated parameter class for clearity
-*
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -29,7 +22,7 @@ int main(int argc, char *argv[]){
   dealii::MultithreadInfo::set_thread_limit	(NUM_THREADS);
 
   //set material parameters genric 
-  parametersClass params;
+  parametersClass<DIMS> params;
   params.setDouble("lambda", 1.0);
   params.setDouble("mu", 1.0);
   params.setDouble("muSG", 1.0);
@@ -39,7 +32,6 @@ int main(int argc, char *argv[]){
   params.setDouble("Gamma", 0.0);
   params.setDouble("C", 5.0);
 	
-	//model parameters
 	params.setInt("DOF",0);
   //params.setString("bcType", "line");
   params.setString("bcType", "dislocation");
@@ -55,19 +47,17 @@ int main(int argc, char *argv[]){
 	params.setDouble("initial_norm",0);
 	params.setDouble("current_norm",0);
 	params.setDouble("max_iteration",3);
-	
-	//output path default:current folder
-	params.setString("output_path", "output0");
-	params.setInt("knotsName",5);
+	params.setString("output_path", "../output");
 	
   printf("reading environmental variables...\n");
   //NURBS file prefix
   char fileName[100];
-  std::sprintf (fileName, "%uD%s%u", DIMS, params.getString("order").c_str(), params.getInt("knotsName"));
+  std::sprintf (fileName, "%uD%s%u", DIMS, params.getString("order").c_str(), params.getInt("knots"));
   std::string filePrefix(fileName);
 		
+
   char meshFile[100];
-	std::sprintf (meshFile, "/home/wzhenlin/workspace/meshes/defectsGradientElasicity/lineDefect/C1/IGAMesh%s.h5", filePrefix.c_str());
+	std::sprintf (meshFile, "../../../../mesh/IGAMesh%s.h5", filePrefix.c_str());
   //readHDF5<DIMS>(meshFile, geometry); 
 
   //Read NURBS geometry  
