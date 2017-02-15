@@ -96,7 +96,6 @@ void model_dislocation<T, dim>::residualForPointDefect(NURBSMesh<dim>* _mesh,kno
   IGAValues<dim> fe_values_temp(_mesh, dim, 0);
    std::vector<std::vector<double> > quadPoints(1);
   quadPoints[0].push_back(_quadPoints[0]); quadPoints[0].push_back(_quadPoints[1]); quadPoints[0].push_back(_quadPoints[2]); quadPoints[0].push_back(2.0);
-  std::cout<<"quadPoints"<<quadPoints[0][0]<<quadPoints[0][3]<<std::endl;
   fe_values_temp.reinit(cell, &quadPoints);
   for (unsigned int dof=0; dof<dofs_per_cell; ++dof) {
 		const unsigned int ck = fe_values.system_to_component_index(dof);
