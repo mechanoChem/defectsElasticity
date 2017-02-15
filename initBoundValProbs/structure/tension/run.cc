@@ -20,7 +20,7 @@ void IGA_structure<dim>::run (){
     IGA<dim>::params.setDouble("l",values[i]);
     IGA<dim>::apply_initial_values();//default(Un=0)
     for (IGA<dim>::currentIncrement=1; IGA<dim>::currentIncrement<=IGA<dim>::numIncrements; ++IGA<dim>::currentIncrement){
-			IGA<dim>::apply_boundary_conditions();
+			apply_boundary_conditions();
 			IGA<dim>::solve(); 
     }
 	}
