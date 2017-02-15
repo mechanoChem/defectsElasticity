@@ -35,6 +35,7 @@ void IGA_structure<dim>::assemble_system_interval (const typename std::vector<kn
     for(unsigned int i=0; i<dofs_per_cell; ++i) R[i]=0.0; 
 		//dislocation
 		structureModel->getResidualIni(R, IGA<dim>::currentIteration);
+		structureModel->residualForMechanics(*cell, fe_values, ULocal, R);
 		structureModel->residualForNeummanBC(*cell, fe_values, ULocal, R);
 			
     //Residual(R) and Jacobian(R')

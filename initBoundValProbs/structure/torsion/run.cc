@@ -24,7 +24,7 @@ void IGA_structure<dim>::run (){
 			IGA<dim>::solve(); 
     }
 	}
-	IGA<dim>::output(0);
+    output(0);
 }
 
 template class IGA_structure<1>;

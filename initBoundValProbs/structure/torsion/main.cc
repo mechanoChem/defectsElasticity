@@ -13,7 +13,7 @@
 //Constant
 #define DIMS 3
 #define NUM_QUAD_POINTS 5 //NUM_QUAD_POINTS<=5 implemented
-#define NUM_THREADS 16
+#define NUM_THREADS 2
 
 
 

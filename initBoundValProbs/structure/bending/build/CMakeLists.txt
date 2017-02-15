@@ -26,7 +26,7 @@ SET(TARGET "main")
 
 #openIGA is shared lib
 ##---------------------------------------------------------------------------------------------------------------------
-SET_PROPERTY(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
+#SET_PROPERTY(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
 
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.8)
 ##---------------------------------------------------------------------------------------------------------------------
@@ -55,7 +55,7 @@ ENDIF()
 #Include external lib as necessary (if they cannot be found automatically);
 ##---------------------------------------------------------------------------------------------------------------------
 SET(IGA_INC "/home/wzhenlin/software/openIGA/include/")
-SET(IGA_LIB "/home/wzhenlin/software/openIGA/lib/libopenIGA.so")
+SET(IGA_LIB "/home/wzhenlin/software/openIGA/lib/libopenIGA.a")
 
 SET (hdfLibrary "/sw/arcts/centos7/hdf5/1.8.16-intel-16.0.3/lib/libhdf5_cpp.so")
 SET (hdfLibrary2 "/sw/arcts/centos7/hdf5/1.8.16-intel-16.0.3/lib/libhdf5.a")
