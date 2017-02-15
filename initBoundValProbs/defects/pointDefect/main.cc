@@ -11,7 +11,7 @@
 //Constant
 #define DIMS 3
 #define NUM_QUAD_POINTS 5 //NUM_QUAD_POINTS<=5 implemented
-#define NUM_THREADS 1
+#define NUM_THREADS 8
 
 
 
@@ -51,7 +51,7 @@ int main(int argc, char *argv[]){
 	params.setDouble("abs_tol",1.0e-16);
 	params.setDouble("initial_norm",0);
 	params.setDouble("current_norm",0);
-	params.setDouble("max_iteration",3);
+	params.setDouble("max_iteration",5);
 	params.setString("output_path", "../output");
 	
   printf("reading environmental variables...\n");

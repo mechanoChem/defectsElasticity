@@ -9,12 +9,15 @@
 #--        defectsElasticity/src  defectsElasticity/include
 #
 #level 2:code for implementing specific structure problem type, change them as you need 
-#--        defectsElasticity/initBoundValProbs/structure/torsion  .....
+#--        defectsElasticity/initBoundValProbs/structure/tension  .....
 #
 # Usage
 # in build folder where you found this CMakeList.txt, change it following guides below
 # $cmake CMakeList.txt
 # $make run 
+# for debug mode
+# or
+# $make release run
 ##---------------------------------------------------------------------------------------------------------------------
 ##---------------------------------------------------------------------------------------------------------------------
 
@@ -24,7 +27,7 @@
 SET(TARGET "main")
 
 
-#openIGA is shared lib
+#this openIGA is not shared lib
 ##---------------------------------------------------------------------------------------------------------------------
 #SET_PROPERTY(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
 

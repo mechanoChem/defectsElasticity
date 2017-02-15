@@ -14,7 +14,10 @@
 # Usage
 # in build folder where you found this CMakeList.txt, change it following guides below
 # $cmake CMakeList.txt
-# $make run 
+# $make run
+# for debug mode
+# or
+# $make release run
 ##---------------------------------------------------------------------------------------------------------------------
 ##---------------------------------------------------------------------------------------------------------------------
 
@@ -24,7 +27,7 @@
 SET(TARGET "main")
 
 
-#openIGA is shared lib
+#this openIGA is NOT shared lib
 ##---------------------------------------------------------------------------------------------------------------------
 #SET_PROPERTY(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
 

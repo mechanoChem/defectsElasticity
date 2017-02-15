@@ -40,7 +40,6 @@ void IGA_dislocation<dim>::assemble_system_interval (const typename std::vector<
 		
 		//make vectors for quadPoints and strength for doing multiple pointDefects
 	  if (cell->defectFlags[3]==1){
-	    std::cout<<"dd"<<std::endl;
 			dealii::Point<dim> quadPoints=IGA<dim>::params.getPoint("DefectQuad1");
 			dealii::Point<dim> strength=IGA<dim>::params.getPoint("DefectStrength1");
 			dislocationModel->residualForPointDefect(IGA<dim>::mesh, *cell, fe_values, ULocal, R, quadPoints,strength);
