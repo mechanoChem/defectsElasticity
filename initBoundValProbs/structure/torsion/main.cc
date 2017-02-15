@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
   dealii::MultithreadInfo::set_thread_limit	(NUM_THREADS);
 
   //set material parameters genric 
-  parametersClass params;
+  parametersClass<DIMS> params;
   params.setDouble("lambda", 1.0);
   params.setDouble("mu", 1.0);
   params.setDouble("muSG", 1.0);
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]){
 	
 	params.setInt("DOF",0);
   //params.setString("bcType", "line");
-  params.setString("bcType", "tension");
+  params.setString("bcType", "torsion");
   params.setString("order", "Quadratic");
   params.setBool("enforceWeakBC", true);
 	params.setBool("finiteStrain", true);

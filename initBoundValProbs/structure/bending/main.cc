@@ -13,7 +13,7 @@
 //Constant
 #define DIMS 3
 #define NUM_QUAD_POINTS 5 //NUM_QUAD_POINTS<=5 implemented
-#define NUM_THREADS 16
+#define NUM_THREADS 2
 
 
 
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
   dealii::MultithreadInfo::set_thread_limit	(NUM_THREADS);
 
   //set material parameters genric 
-  parametersClass params;
+  parametersClass<DIMS> params;
   params.setDouble("lambda", 1.0);
   params.setDouble("mu", 1.0);
   params.setDouble("muSG", 1.0);
