@@ -1,10 +1,3 @@
-/*
-*main file
-*parameters for numerical simulation (e.g. solver parameters) and material parameters are defined in one class
-*User could defined two separated parameter class for clearity
-*
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -12,6 +5,8 @@
 #include <ctime>
 #include <vector>
 
+// supplementary headers. included in IGA inside. 
+//#include "supplementary/parameters.h"
 //method: IGA
 #include "initBoundValueProb/IGA_structure.h"
 
@@ -53,8 +48,6 @@ int main(int argc, char *argv[]){
 	params.setDouble("initial_norm",0);
 	params.setDouble("current_norm",0);
 	params.setDouble("max_iteration",3);
-	
-	//output path default:current folder
 	params.setString("output_path", "../output");
 	
   printf("reading environmental variables...\n");
@@ -65,7 +58,7 @@ int main(int argc, char *argv[]){
 		
 
   char meshFile[100];
-	std::sprintf (meshFile, "/home/wzhenlin/workspace/meshes/defectsGradientElasicity/lineDefect/C1/IGAMesh%s.h5", filePrefix.c_str());
+	std::sprintf (meshFile, "../../../../mesh/IGAMesh%s.h5", filePrefix.c_str());
   //readHDF5<DIMS>(meshFile, geometry); 
 
   //Read NURBS geometry  

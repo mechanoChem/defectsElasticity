@@ -28,7 +28,7 @@ ENDIF()
 
 SET(src_DIR "/home/wzhenlin/workspace/Defect/defect1/src")
 
-FILE (GLOB TARGET_SRC "*.cc" "main.cc")
+FILE (GLOB TARGET_SRC "${src_DIR}/initBoundValueProb/IGA_structure.cc" "${src_DIR}/model/structure/*.cc" "src/model/*.cc" "src/*.cc" "main.cc")
 
 
 DEAL_II_INITIALIZE_CACHED_VARIABLES()
