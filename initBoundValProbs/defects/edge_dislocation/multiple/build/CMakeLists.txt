@@ -37,7 +37,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8.8)
 ##---------------------------------------------------------------------------------------------------------------------
 #usually DEAL_II_DIR for explicitly deal.II path; deal.II_DIR and DEAL_II_DIR could be preloaded enviromental variable
 
-SET(ENV{DEAL_II_DIR} "/nfs/mcfs_comp/home/rudraa/software/dealii-8.4.1/installWithTrilinos")
+#SET(ENV{DEAL_II_DIR} "/nfs/mcfs_comp/home/rudraa/software/dealii-8.4.1/installWithTrilinos")
 FIND_PACKAGE(deal.II 8.0 QUIET
   HINTS ${deal.II_DIR} ${DEAL_II_DIR} ../ ../../ $ENV{DEAL_II_DIR}
   )
@@ -54,8 +54,8 @@ ENDIF()
 
 #Include external lib as necessary (if they cannot be found automatically);
 ##---------------------------------------------------------------------------------------------------------------------
-SET(IGA_INC "/home/snverner/software/openIGA-master/include/")
-SET(IGA_LIB "/home/snverner/software/openIGA-master/lib/libopenIGA.a")
+SET(IGA_INC "/home/wzhenlin/software/openIGA/include/")
+SET(IGA_LIB "/home/wzhenlin/software/openIGA/lib/libopenIGA.a")
 
 SET (hdfLibrary "/sw/arcts/centos7/hdf5/1.8.16-intel-16.0.3/lib/libhdf5_cpp.so")
 SET (hdfLibrary2 "/sw/arcts/centos7/hdf5/1.8.16-intel-16.0.3/lib/libhdf5.a")
@@ -64,16 +64,16 @@ SET (hdfInclude "/sw/arcts/centos7/hdf5/1.8.16-intel-16.0.3/include")
 SET(szip_LIB "/sw/arcts/centos7/szip/2.1/lib/libsz.so")
 SET(szip_INC "/sw/arcts/centos7/szip/2.1/include")
 
-SET (SUPERLU_INC "/home/snverner/software/SuperLU_4.3/SRC/")
-SET (SUPERLU_LIB "/home/snverner/software/SuperLU_4.3/lib/libsuperlu_4.3.a")
+SET (SUPERLU_INC "/home/wzhenlin/software/SuperLU_4.3/SRC/")
+SET (SUPERLU_LIB "/home/wzhenlin/software/SuperLU_4.3/lib/libsuperlu_4.3.a")
 ##---------------------------------------------------------------------------------------------------------------------
 
 
 #Include all source files
 ##---------------------------------------------------------------------------------------------------------------------
 #set shortcut for three directories
-SET(src_DIR "/home/snverner/workspace/Defect2/src")
-SET(src_INC "/home/snverner/workspace/Defect2/include")
+SET(src_DIR "/home/wzhenlin/workspace/defectsElasticity/src")
+SET(src_INC "/home/wzhenlin/workspace/defectsElasticity/include")
 
 
 #Include all source files, usually you do NOT need to change anything below if code structure is not modified.
