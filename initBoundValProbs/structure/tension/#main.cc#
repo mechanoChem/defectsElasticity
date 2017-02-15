@@ -10,10 +10,7 @@
 //method: IGA
 #include "initBoundValueProb/IGA_structure.h"
 
-//Constant
-#define DIMS 3
-#define NUM_QUAD_POINTS 5 //NUM_QUAD_POINTS<=5 implemented
-#define NUM_THREADS 2
+
 
 
 
