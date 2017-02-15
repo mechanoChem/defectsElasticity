@@ -26,7 +26,7 @@ class model_structure : public model<T, dim>
 	/*
 	*apply neumman boundary condition at element level
 	*/
-	void residualForNewmmanBC(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R);
+	void residualForNeummanBC(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R);
 	
 	/*
 	*evaluate residual of body force term

@@ -9,7 +9,7 @@
 #--        defectsElasticity/src  defectsElasticity/include
 #
 #level 2:code for implementing specific structure problem type, change them as you need 
-#--        defectsElasticity/initBoundValProbs/structure/tension  .....
+#--        defectsElasticity/initBoundValProbs/structure/torsion  .....
 #
 # Usage
 # in build folder where you found this CMakeList.txt, change it following guides below
