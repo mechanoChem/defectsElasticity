@@ -35,7 +35,7 @@ int main(int argc, char *argv[]){
 	
 	params.setInt("DOF",0);
   //params.setString("bcType", "line");
-  params.setString("bcType", "bending");
+  params.setString("bcType", "tension");
   params.setString("order", "Quadratic");
   params.setBool("enforceWeakBC", true);
 	params.setBool("finiteStrain", true);
@@ -48,6 +48,7 @@ int main(int argc, char *argv[]){
 	params.setDouble("initial_norm",0);
 	params.setDouble("current_norm",0);
 	params.setDouble("max_iteration",3);
+	params.setString("output_path", "../output");
 	
   printf("reading environmental variables...\n");
   //NURBS file prefix
@@ -57,7 +58,7 @@ int main(int argc, char *argv[]){
 		
 
   char meshFile[100];
-	std::sprintf (meshFile, "/home/wzhenlin/workspace/meshes/defectsGradientElasicity/lineDefect/C1/IGAMesh%s.h5", filePrefix.c_str());
+	std::sprintf (meshFile, "../../../../mesh/IGAMesh%s.h5", filePrefix.c_str());
   //readHDF5<DIMS>(meshFile, geometry); 
 
   //Read NURBS geometry  

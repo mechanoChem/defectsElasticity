@@ -58,7 +58,7 @@ void model_structure<T, dim>::residualForNeummanBC(knotSpan<dim>& cell, IGAValue
 				for (unsigned int q=0; q<fe_values.n_face_quadrature_points; ++q){
 	  			if (std::strcmp(model<T, dim>::bcType,"tension")==0){
 	    			//tension along dim-1 direction
-	    			if ((cell.boundaryFlags[faceID]==4) and (ck==2)){
+	    			if ((cell.boundaryFlags[faceID]==4) and (ck==1)){
 	      			R[dof] += -fe_values.shape_value_face(dof, q, faceID)*load*fe_values.JxW_face(q, faceID);
 	    			}
 	  			}
