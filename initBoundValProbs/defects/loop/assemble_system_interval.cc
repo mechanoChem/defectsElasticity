@@ -37,7 +37,7 @@ void IGA_dislocation<dim>::assemble_system_interval (const typename std::vector<
 		//dislocation
 		dislocationModel->getResidualIni(R, IGA<dim>::currentIteration);
 		dislocationModel->residualForMechanics(*cell, fe_values, ULocal, R);
-		dislocationModel->residualForDislocation(*cell, fe_values, ULocal, R);
+		dislocationModel->residualForDislocation(*cell, fe_values, ULocal, R,IGA<dim>::params.getDouble("b"));
     //Residual(R) and Jacobian(R')
     for (unsigned int i=0; i<dofs_per_cell; ++i) {
       for (unsigned int j=0; j<dofs_per_cell; ++j){

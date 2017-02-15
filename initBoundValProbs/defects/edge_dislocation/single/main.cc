@@ -57,7 +57,7 @@ int main(int argc, char *argv[]){
 		
 
   char meshFile[100];
-	std::sprintf (meshFile, "../../../../mesh/IGAMesh%s.h5", filePrefix.c_str());
+	std::sprintf (meshFile, "../../../../../mesh/IGAMesh%s.h5", filePrefix.c_str());
   //readHDF5<DIMS>(meshFile, geometry); 
 
   //Read NURBS geometry  

@@ -26,7 +26,7 @@ SET(TARGET "main")
 
 #openIGA is shared lib
 ##---------------------------------------------------------------------------------------------------------------------
-SET_PROPERTY(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
+#SET_PROPERTY(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
 
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.8)
 ##---------------------------------------------------------------------------------------------------------------------
