@@ -6,7 +6,7 @@
 
 using namespace std;
 template <int dim>
-IGA_structure<dim>::IGA_structure (NURBSMesh<dim>& _mesh, parametersClass& _params):IGA<dim>(_mesh,_params)
+IGA_structure<dim>::IGA_structure (NURBSMesh<dim>& _mesh, parametersClass<dim>& _params):IGA<dim>(_mesh,_params)
 {
 	IGA<dim>::numIncrements=1; IGA<dim>::currentIncrement=0;
 }

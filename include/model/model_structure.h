@@ -31,7 +31,7 @@ class model_structure : public model<T, dim>
 	/*
 	*evaluate residual of body force term
 	*/
-	void residualForBodyforce(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R);
+	//void residualForBodyforce(knotSpan<dim>& cell, IGAValues<dim>& fe_values, dealii::Table<1, T >& ULocal, dealii::Table<1, T >& R);
 
 };
 

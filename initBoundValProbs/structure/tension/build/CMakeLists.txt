@@ -8,8 +8,8 @@
 #level 1:generic code for initial boundary value problem, you do not need to change anything inside follow folders
 #--        defectsElasticity/src  defectsElasticity/include
 #
-#level 2:code for implementing specific defects type, change them as you need 
-#--        defectsElasticity/initBoundValProbs/defects/edge_dislication/single/  .....
+#level 2:code for implementing specific structure problem type, change them as you need 
+#--        defectsElasticity/initBoundValProbs/structure/tension  .....
 #
 # Usage
 # in build folder where you found this CMakeList.txt, change it following guides below
@@ -59,7 +59,7 @@ SET(IGA_LIB "/home/wzhenlin/software/openIGA/lib/libopenIGA.so")
 
 SET (hdfLibrary "/sw/arcts/centos7/hdf5/1.8.16-intel-16.0.3/lib/libhdf5_cpp.so")
 SET (hdfLibrary2 "/sw/arcts/centos7/hdf5/1.8.16-intel-16.0.3/lib/libhdf5.a")
-maSET (hdfInclude "/sw/arcts/centos7/hdf5/1.8.16-intel-16.0.3/include")
+SET (hdfInclude "/sw/arcts/centos7/hdf5/1.8.16-intel-16.0.3/include")
 
 SET(szip_LIB "/sw/arcts/centos7/szip/2.1/lib/libsz.so")
 SET(szip_INC "/sw/arcts/centos7/szip/2.1/include")
@@ -78,7 +78,7 @@ SET(src_INC "/home/wzhenlin/workspace/defectsElasticity/include")
 
 #Include all source files, usually you do NOT need to change anything below if code structure is not modified.
 
-FILE (GLOB TARGET_SRC "../*.cc", "${src_DIR}/model/dislocation/*.cc" "${src_DIR}/base/IGA_dislocation.cc" )
+FILE (GLOB TARGET_SRC "../*.cc", "${src_DIR}/model/structure/*.cc" "${src_DIR}/base/IGA_structure.cc" )
 ##---------------------------------------------------------------------------------------------------------------------
 
 
