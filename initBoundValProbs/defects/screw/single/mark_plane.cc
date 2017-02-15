@@ -19,7 +19,7 @@ template <int dim>
 void IGA_dislocation<dim>::mark_plane(){
   for (typename std::vector<knotSpan<dim> >::iterator cell=IGA<dim>::mesh->knotSpanVector.begin(); cell<IGA<dim>::mesh->knotSpanVector.end(); cell++){
     
-		//edge dislocation at center
+		//screw dislocation at center
 		if(cell->endKnots[0][1]>0.5 and cell->endKnots[0][0]<0.5 and cell->endKnots[1][0]>=0.5) {
 			cell->planeFlags[0*2+1]=2; cell->planeFlags[6]=1; cell->Sp_planeQuad_Point=0;
 			cell->defectFlags[5]=1;
@@ -30,6 +30,8 @@ void IGA_dislocation<dim>::mark_plane(){
 			cell->defectFlags[5]=1;
 		  cell->defectFlags[2]=cell->defectFlags[2]+1;   
 		}
+		//add more half plane for multiple screw dislocations
+		
   }
 }
 

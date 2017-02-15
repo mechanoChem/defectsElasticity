@@ -5,7 +5,7 @@
 //planeFlags[6]=1 mark plane inside of cell. planeFlags[6]=0 (default) mark plane on cell surface.
 //using Sp_planeQuad_Point to specify the position of plane inside of cell.
 // 
-//We have 6 slots in defectFlags. 0-2 for direction of burger vector. 3:TBD 4:edge, 5:screw
+//We have 6 slots in defectFlags. 0-2 for direction of burger vector. 3:PointDefects 4:edge, 5:screw
 //defectFlags[i]=n: i:direction of burger vector, n:number of half planes overlaped. i<=2;
 //
 // 
@@ -30,27 +30,6 @@ void IGA_dislocation<dim>::mark_plane(){
 			cell->defectFlags[4]=1;
 		  cell->defectFlags[0]=cell->defectFlags[1]+1;   
 		}
-		/*
-		for loop calculation of paper
-		//#1 dislocation  
-		if(cell->endKnots[0][1]>0.4 and cell->endKnots[0][0]<0.4 and cell->endKnots[1][1]>=0.4 and cell->endKnots[2][0]>=0.4 and cell->endKnots[2][1]<=0.6) {
-			cell->planeFlags[0*2+1]=0*2+2; cell->planeFlags[6]=1; cell->Sp_planeQuad_Point=0;
-			cell->defectFlags[4]=1;
-		  cell->defectFlags[0]=cell->defectFlags[0]+1;                                    
-		}
-		//#2 dislocation           
-    if(cell->endKnots[1][1]>0.4 and cell->endKnots[1][0]<0.4 and cell->endKnots[2][0]<=0.6 and cell->endKnots[2][1]>=0.4 and cell->endKnots[0][0]>=0.4 and cell->endKnots[0][1]<=0.6) {
-		  cell->planeFlags[1*2]=0*2+1; cell->planeFlags[6]=1; cell->Sp_planeQuad_Point=0;
-			cell->defectFlags[4]=1;
-		  cell->defectFlags[0]=cell->defectFlags[1]+1;
-		}
-		//#3 dislocation          
-		if(cell->endKnots[0][1]>0.6 and cell->endKnots[0][0]<0.6 and cell->endKnots[2][1]<=0.6 and cell->endKnots[2][1]>=0.4 and cell->endKnots[1][1]<=0.6) {
-		  cell->planeFlags[0*2+1]=0*2+2; cell->planeFlags[6]=1; cell->Sp_planeQuad_Point=0;
-			cell->defectFlags[4]=1;
-		  cell->defectFlags[0]=cell->defectFlags[0]+1;
-		}
-		*/
   }
 }
 

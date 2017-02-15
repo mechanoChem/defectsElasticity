@@ -30,29 +30,7 @@ void IGA_dislocation<dim>::mark_plane(){
 			cell->defectFlags[4]=1;
 		  cell->defectFlags[0]=cell->defectFlags[1]+1;   
 		}
-		
 		// add more half plane for multiple dislocation
-		/*
-		for loop calculation of paper
-		//#1 dislocation  
-		if(cell->endKnots[0][1]>0.4 and cell->endKnots[0][0]<0.4 and cell->endKnots[1][1]>=0.4 and cell->endKnots[2][0]>=0.4 and cell->endKnots[2][1]<=0.6) {
-			cell->planeFlags[0*2+1]=0*2+2; cell->planeFlags[6]=1; cell->Sp_planeQuad_Point=0;
-			cell->defectFlags[4]=1;
-		  cell->defectFlags[0]=cell->defectFlags[0]+1;                                    
-		}
-		//#2 dislocation           
-    if(cell->endKnots[1][1]>0.4 and cell->endKnots[1][0]<0.4 and cell->endKnots[2][0]<=0.6 and cell->endKnots[2][1]>=0.4 and cell->endKnots[0][0]>=0.4 and cell->endKnots[0][1]<=0.6) {
-		  cell->planeFlags[1*2]=0*2+1; cell->planeFlags[6]=1; cell->Sp_planeQuad_Point=0;
-			cell->defectFlags[4]=1;
-		  cell->defectFlags[0]=cell->defectFlags[1]+1;
-		}
-		//#3 dislocation          
-		if(cell->endKnots[0][1]>0.6 and cell->endKnots[0][0]<0.6 and cell->endKnots[2][1]<=0.6 and cell->endKnots[2][1]>=0.4 and cell->endKnots[1][1]<=0.6) {
-		  cell->planeFlags[0*2+1]=0*2+2; cell->planeFlags[6]=1; cell->Sp_planeQuad_Point=0;
-			cell->defectFlags[4]=1;
-		  cell->defectFlags[0]=cell->defectFlags[0]+1;
-		}
-		*/
   }
 }
 

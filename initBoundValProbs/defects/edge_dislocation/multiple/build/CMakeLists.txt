@@ -55,7 +55,7 @@ ENDIF()
 #Include external lib as necessary (if they cannot be found automatically);
 ##---------------------------------------------------------------------------------------------------------------------
 SET(IGA_INC "/home/snverner/software/openIGA-master/include/")
-SET(IGA_LIB "/home/snverner/software/openIGA-master/lib/libopenIGA.so")
+SET(IGA_LIB "/home/snverner/software/openIGA-master/lib/libopenIGA.a")
 
 SET (hdfLibrary "/sw/arcts/centos7/hdf5/1.8.16-intel-16.0.3/lib/libhdf5_cpp.so")
 SET (hdfLibrary2 "/sw/arcts/centos7/hdf5/1.8.16-intel-16.0.3/lib/libhdf5.a")

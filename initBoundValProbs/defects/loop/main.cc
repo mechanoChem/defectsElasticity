@@ -11,7 +11,7 @@
 //Constant
 #define DIMS 3
 #define NUM_QUAD_POINTS 5 //NUM_QUAD_POINTS<=5 implemented
-#define NUM_THREADS 16
+#define NUM_THREADS 8
 
 
 
@@ -57,7 +57,7 @@ int main(int argc, char *argv[]){
 		
 
   char meshFile[100];
-	std::sprintf (meshFile, "../../../mesh/IGAMesh%s.h5", filePrefix.c_str());
+	std::sprintf (meshFile, "../../../../mesh/IGAMesh%s.h5", filePrefix.c_str());
   //readHDF5<DIMS>(meshFile, geometry); 
 
   //Read NURBS geometry  

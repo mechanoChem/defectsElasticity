@@ -23,7 +23,7 @@ void IGA_dislocation<dim>::run (){
     IGA<dim>::apply_initial_values();//default(Un=0)
     //output(0);
     for (IGA<dim>::currentIncrement=1; IGA<dim>::currentIncrement<=IGA<dim>::numIncrements; ++IGA<dim>::currentIncrement){
-			IGA<dim>::apply_boundary_conditions();
+			apply_boundary_conditions();
 			IGA<dim>::solve(); 
 			//L2_norm=get_L2_norm( mesh, U, params);
 			//output(currentIncrement);
